@@ -7,7 +7,7 @@ const route = require('./routes');
 const port = 3000;
 
 // Using data resources static
-app.use(express.static(path.join(__dirname, 'public')));
+                      app.use(express.static(path.join(__dirname, 'public')));
 
 //
 app.use(express.urlencoded({ extended: true }));
