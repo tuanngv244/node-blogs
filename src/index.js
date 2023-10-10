@@ -13,11 +13,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // HTTP logger
-app.use(morgan("combined"));
+     app.use(morgan("combined"));
 
 // Template
 app.engine("hbs", handlebars.engine({ extname: ".hbs" }));
-app.set("view engine", "hbs");
+      app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
 
 // Routes init
