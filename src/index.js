@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // HTTP logger
-    app.use(morgan('combined'));
+       app.use(morgan('combined'));
 
 // Template
   app.engine('hbs', handlebars.engine({ extname: '.hbs' }));
