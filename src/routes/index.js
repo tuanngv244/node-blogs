@@ -1,13 +1,10 @@
 const newsRouter = require('./news');
+const coursesRouter = require('./courses');
 const siteRouter = require('./site');
-
-const RoutePaths = {
-    HOME: '/',
-    NEWS: '/news',
-    SEARCH: '/search',
-};
+const { RoutePaths } = require('../config/path');
 
 function route(app) {
+    app.use(RoutePaths.COURSES, coursesRouter);
     app.use(RoutePaths.NEWS, newsRouter);
     app.use(RoutePaths.HOME, siteRouter);
 
