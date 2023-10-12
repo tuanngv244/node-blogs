@@ -15,11 +15,11 @@ class CourseController {
     store(req, res, next) {
         try {
             const formData = req.body;
-            formData['image'] =
-                'https://files.fullstack.edu.vn/f8-prod/courses/13/13.png';
             const course = new Course(formData);
-            course.save();
-            res.send('Tạo thành công!!');
+            course
+                .save()
+                .then(() => res.redirect('/'))
+                .catch((err) => {});
         } catch (error) {
             next(next);
         }

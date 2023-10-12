@@ -13,23 +13,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-primary">
-              <a
-                class="nav-link"
-                href="/courses/create"
-                style="text-decoration:none; color:white; padding:0;"
-              >Thêm khóa học</a>
-            </button>
-          </li>
-        </ul>
+        <div style="margin-left: auto;" class="dropdown">
+          <ul style="display: flex; align-items:center; gap:0 16px; ">
+            <li><a href="/courses/create">Đăng khóa học</a></li>
+            <li><a href="/me/stored/courses">Khóa học của tôi</a></li>
+            <li><a href="/me/stored/news">Tin tức của tôi</a></li>
+            <li><a href="#">Đăng xuất</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav></header>
