@@ -1,0 +1,47 @@
+<div class="container">
+  <form
+    class="mt-3 mb-3"
+    method="POST"
+    action="/courses/{{course._id}}?_method=PUT"
+  >
+    <div class="mb-3">
+      <label for="name" class="form-label">Tên</label>
+      <input
+        value="{{course.name}}"
+        type="text"
+        name="name"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Mô tả</label>
+      <textarea
+        style="min-height: 100px;"
+        name="description"
+        class="form-control"
+      >
+        {{course.description}}
+      </textarea>
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Mức độ</label>
+      <input
+        value="{{course.level}}"
+        type="text"
+        name="level"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Hình ảnh</label>
+      <input
+        value="{{course.image}}"
+        type="text"
+        name="image"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sửa khóa học</button>
+  </form>
+</div>
